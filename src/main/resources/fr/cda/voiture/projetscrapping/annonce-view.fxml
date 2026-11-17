@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="900.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.cda.voiture.projetscrapping.controller.AnnonceController">
+    <children>
+        <MenuBar>
+            <menus>
+                <Menu text="Fichier">
+                    <items>
+                        <MenuItem fx:id="menuEnregistrerFichier" text="Enregistrer dans un fichier" />
+                        <MenuItem fx:id="menuEnvoiCourriel" text="Envoi Courriel" />
+                        <MenuItem fx:id="menuEnregistrerBdd" text="Enregistrer dans la base de données" />
+                        <SeparatorMenuItem />
+                        <MenuItem fx:id="menuQuitter" text="Quitter" />
+                    </items>
+                </Menu>
+                <Menu text="Paramètres">
+                    <items>
+                        <MenuItem fx:id="menuParametresBdd" text="Base de données" />
+                    </items>
+                </Menu>
+                <Menu text="Aide">
+                    <items>
+                        <MenuItem fx:id="menuModeEmploi" text="Mode d'emploi" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane prefHeight="210.0" prefWidth="900.0">
+            <children>
+                <Label layoutX="75.0" layoutY="15.0" text="Recherche de Véhicule">
+                    <font>
+                        <Font name="System Bold" size="44.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="comboMarque" layoutX="75.0" layoutY="95.0" prefWidth="150.0" promptText="Marque" />
+                <ComboBox fx:id="comboModele" layoutX="242.0" layoutY="95.0" prefWidth="150.0" promptText="Modele" />
+                <TextField fx:id="textFieldVilleCP" layoutX="410.0" layoutY="95.0" promptText="Ville / Code postal" />
+
+                <CheckBox fx:id="checkLeBonCoin" layoutX="665.0" layoutY="95.0" mnemonicParsing="false" text="LeBonCoin">
+                    <font><Font size="14.0" /></font>
+                </CheckBox>
+                <CheckBox fx:id="checkLaCentrale" layoutX="665.0" layoutY="120.0" mnemonicParsing="false" text="LaCentrale">
+                    <font><Font size="14.0" /></font>
+                </CheckBox>
+                <CheckBox fx:id="checkAutoScout24" layoutX="665.0" layoutY="146.0" mnemonicParsing="false" text="AutoScout24">
+                    <font><Font size="14.0" /></font>
+                </CheckBox>
+                <Button fx:id="btnRechercher" layoutX="75.0" layoutY="135.0" mnemonicParsing="false" prefWidth="102.0" text="Rechercher" />
+                <Button fx:id="btnEffacer" layoutX="190.0" layoutY="135.0" mnemonicParsing="false" prefWidth="102.0" text="Effacer" />
+                <ProgressBar fx:id="progressRecherche" layoutX="75.0" layoutY="175.0" prefWidth="317.0" progress="0.0" visible="false" />
+            </children>
+        </AnchorPane>
+        <TableView fx:id="tvAnnonce" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="tcModele" prefWidth="130.0" text="Modele" />
+                <TableColumn fx:id="tcEnergie" prefWidth="90.0" text="Energie" />
+                <TableColumn fx:id="tcKms" prefWidth="90.0" text="Kms" />
+                <TableColumn fx:id="tcPrix" prefWidth="90.0" text="Prix" />
+                <TableColumn fx:id="tcAnnee" prefWidth="90.0" text="Année" />
+                <TableColumn fx:id="tcLieu" prefWidth="120.0" text="Lieu" />
+                <TableColumn fx:id="tcTransmission" prefWidth="110.0" text="Transmission" />
+                <TableColumn fx:id="tcPhoto" prefWidth="180.0" text="Photo" />
+            </columns>
+        </TableView>
+    </children>
+</VBox>

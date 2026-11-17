@@ -1,9 +1,9 @@
-package fr.cda.voiture.projetscrapping;
+package fr.cda.voiture.projetscrapping.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class AnnonceController {
     @FXML
     private Label welcomeText;
 
