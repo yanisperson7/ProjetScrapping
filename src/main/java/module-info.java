@@ -3,6 +3,6 @@ module org.example.projetscrapping {
     requires javafx.fxml;
 
 
-    opens org.example.projetscrapping to javafx.fxml;
-    exports org.example.projetscrapping;
+    opens fr.cda.voiture.projetscrapping to javafx.fxml;
+    exports fr.cda.voiture.projetscrapping;
 }

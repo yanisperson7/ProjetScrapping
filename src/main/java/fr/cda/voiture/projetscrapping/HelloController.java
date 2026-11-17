@@ -1,4 +1,4 @@
-package org.example.projetscrapping;
+package fr.cda.voiture.projetscrapping;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
